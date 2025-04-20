@@ -18,3 +18,8 @@ models:
         data_tests:
           - accepted_values:
               values: ['completed', 'shipped', 'returned', 'return_pending', 'placed']
+      - name: customer_id
+        data_tests:
+          - relationships:
+              to: ref('stg_jaffle_shop_customers')
+              field: customer_id
